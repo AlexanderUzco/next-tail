@@ -22,13 +22,14 @@ const HomePage = () => {
     href: string;
   }
   
-  type RefType= any
-
-  const CustonLink = forwardRef<RefType, Props>(({ onClick, href, children }, ref) => {
+  const CustonLink = forwardRef<Props, any>(({ onClick, href, children }, ref) => {
+    const refCuston = (ref as any);
     return (
-      <a className='w-full md:max-w-full' href={href} onClick={onClick} ref={ref}>
-        {children}
-      </a>
+      <div className='w-full md:max-w-full'>
+        <a href={href} onClick={onClick} ref={refCuston}>
+          {children}
+        </a>
+      </div>
     )
   });
   

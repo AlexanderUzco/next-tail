@@ -3,10 +3,10 @@ import styles from './layout.module.css';
 
 const Layout: React.FC = ({children}) => {
     return(
-        <div>
+        <div className="">
             <Header/>
             {children}
-            <footer>This is the footer</footer>
+            <footer className="h-10">This is the footer</footer>
 
             {/*<style jsx>{`
                 .container {

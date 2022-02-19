@@ -23,14 +23,18 @@ const ProductPage = () => {
     };
   }, [query && query.id])
 
-  return (
-    <section>
+  return (  
+    <section className='
+      bg-white
+    '>
       <Link href={'/'}>
         <a>Back</a>
       </Link>
-      <DynamicProductContent 
-        
-      />
+      {product && 
+        <DynamicProductContent 
+          product={product}
+        />
+      }
     </section>
   )
 }
